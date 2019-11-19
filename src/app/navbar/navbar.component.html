@@ -1,19 +1,8 @@
 <nav>
   <ul>
-    <li>
-      <h3>{{titulo}}</h3>
-    </li>
-    <li>
-      Menu
-    </li>
-    <li>
-      cardapio
-    </li>
-    <li>
-      serviços
-    </li>
-    <li>
-      contato
+    <li>{{titulo}}</li>
+    <li *ngFor="let links of menu">
+      <a [href]=links.link>{{links.titulo}}</a>
     </li>
   </ul>
 </nav>
