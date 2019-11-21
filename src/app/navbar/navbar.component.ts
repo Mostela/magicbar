@@ -6,12 +6,9 @@ import {MeuMenu} from './menu';
   styleUrls: ['./navbar.component.less']
 })
 export class NavbarComponent implements OnInit {
-  titulo="Magic Bar";
+  titulo = 'Magic Bar';
   menu = MeuMenu;
   constructor() {}
-  navegador(){
-    
-  }
   ngOnInit() {
   }
 
