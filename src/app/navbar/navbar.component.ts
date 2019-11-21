@@ -7,7 +7,7 @@ import {MeuMenu} from './menu';
 })
 export class NavbarComponent implements OnInit {
   titulo = 'Magic Bar';
-  menu = MeuMenu;
+  menu = MeuMenu.reverse();
   constructor() {}
   ngOnInit() {
   }
