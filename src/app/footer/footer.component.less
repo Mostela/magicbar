@@ -1,12 +1,12 @@
-//@import "/~/src/app/estilo/variaveis.less";
-//@import "/~/src/app/estilo/funcao.less";
-@import "../estilo/variaveis.less";
-@import "../estilo/funcao.less";
+@import "/~/src/app/estilo/variaveis.less";
+@import "/~/src/app/estilo/funcao.less";
+//@import "../estilo/variaveis.less";
+//@import "../estilo/funcao.less";
 
 footer{
   background-color: @cor-um;
   border-top: @cor-dois dotted 5px;
-  color: @letra;
+  color: @letra-branca;
   font-family: @fonte;
   div{
     padding: 1%;
@@ -19,14 +19,37 @@ footer{
   }
   ul{
     list-style-type: none;
-    li{
-      margin-top: 1%;
-      margin-bottom: 1%;
-      a{
-        .garrfa();
+  }
+  div:first-child{
+    ul{
+    list-style-type: none;
+      li{
+        text-transform: capitalize;
+        border: grey 1px solid;
+        box-shadow: grey 1px 1px 3px;
+        margin: 4px 0 4px;
+        width: 40%;
+        font-family: cursive;
+        text-align: center;
+        background-color: @cor-cinco;
+        border-left: 5px solid gray;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        animation-duration: 1s;
+        a{
+          padding: 2%;
+          width: 100%;
+          color: @letra-branca;
+        }
+      }
+      li:hover{
+        transform: rotate(-5deg);
       }
     }
   }
+  
   a{
     .antiLink();
   }
