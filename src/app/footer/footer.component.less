@@ -1,0 +1,33 @@
+//@import "/~/src/app/estilo/variaveis.less";
+//@import "/~/src/app/estilo/funcao.less";
+@import "../estilo/variaveis.less";
+@import "../estilo/funcao.less";
+
+footer{
+  background-color: @cor-um;
+  border-top: @cor-dois dotted 5px;
+  color: @letra;
+  font-family: @fonte;
+  div{
+    padding: 1%;
+    display: inline-block;
+    width: 25%;
+  }
+  div:last-child{
+    flex: available;
+    width: 50%;
+  }
+  ul{
+    list-style-type: none;
+    li{
+      margin-top: 1%;
+      margin-bottom: 1%;
+      a{
+        .garrfa();
+      }
+    }
+  }
+  a{
+    .antiLink();
+  }
+}

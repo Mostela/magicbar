@@ -1,0 +1,33 @@
+footer {
+  background-color: #3f1e1e;
+  border-top: #dbc023 dotted 5px;
+  color: #000;
+  font-family: 'Lato', 'Arial', Fantasy;
+}
+footer div {
+  padding: 1%;
+  display: inline-block;
+  width: 25%;
+}
+footer div:last-child {
+  flex: available;
+  width: 50%;
+}
+footer ul {
+  list-style-type: none;
+}
+footer ul li {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+footer ul li a {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+}
+footer a {
+  text-decoration: none;
+  color: #000;
+}
+/*# sourceMappingURL=footer.component.css.map */
