@@ -1,6 +1,8 @@
 nav {
+  cursor: default;
   margin: 0;
   color: #FFF;
+  padding: 5px;
   background-color: #3f1e1e;
   border-bottom: dotted #dbc023 5px;
 }
@@ -11,24 +13,33 @@ nav ul {
   overflow: hidden;
 }
 nav ul li {
-  float: left;
+  float: right;
   margin: 0 1% 0;
 }
 nav ul li a {
+  text-transform: uppercase;
   display: block;
   text-decoration: none;
-  color: 'Lato', 'Arial', Fantasy;
-  padding-bottom: 0.5px;
-  padding-top: 0.5px;
-  padding-left: 1px;
-  padding-right: 1px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
   background-color: #dbc023;
   color: #000;
   border-radius: 10px;
   border: none;
-  opacity: 0.8;
+  opacity: 0.6;
+  text-shadow: 2px 2px 4px #dbc023;
 }
 nav ul li a:hover {
   opacity: 1;
+}
+nav ul li:first-child {
+  text-transform: uppercase;
+  float: left;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px #FF0000;
+  margin-left: 10%;
+  font-size: 22px;
 }
 /*# sourceMappingURL=navbar.component.css.map */
