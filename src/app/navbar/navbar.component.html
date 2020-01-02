@@ -1,0 +1,12 @@
+<nav>
+  <ul>
+    <li>
+      <a [routerLink]="['/']" routerLinkActive="router-link-active">
+        {{titulo}}
+      </a>
+    </li>
+    <li *ngFor="let links of menu">
+      <a [routerLink]=links.link routerLinkActive="router-link-active" >{{links.titulo}}</a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,41 @@
+@import "../estilo/variaveis";
+@import "../estilo/funcao";
+
+nav{
+  cursor: default;
+  margin: 0;
+  color:@letra-branca;
+  padding: 5px;
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    li{
+      float: right;
+      margin: 0 1% 0;
+      a{
+        text-transform: uppercase;
+        display: block;
+        .antiLink();
+        .botao(@cor-dois);
+        opacity: 0.6;
+        text-shadow: 2px 2px 4px @cor-dois;
+      }
+      a:hover{
+        opacity: 1;
+      }
+    }
+
+    li:first-child{
+      text-transform: uppercase;
+      float: left;
+      font-weight: bolder;
+      text-shadow: 2px 2px 4px @cor-cinco;
+      margin-left: 10%;
+      font-size: 22px;
+    }
+  }
+  background-color: @cor-um;
+  border-bottom: dotted @cor-dois 5px;
+}

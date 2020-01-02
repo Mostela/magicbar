@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { CardapioComponent } from './pages/cardapio/cardapio.component';
+import { IndexComponent } from './pages/index/index.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    CardapioComponent,
+    NavbarComponent,
+    FooterComponent,
+    AppComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
