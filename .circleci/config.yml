@@ -2,14 +2,10 @@
 version: 2.1
 jobs:
   construcao:
-    working_directoty: Magicbar
     docker:
       - image: circleci/node:10-browsers # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
-      - run:
-          - name: Mostra a Branch do teste
-          - command: echo ${CIRCLE_BRANCH}
       - restore_cache:
           - keys:
               - v1-dependencies-{{ checksum "package-lock.json" }}
