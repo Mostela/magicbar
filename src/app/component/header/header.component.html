@@ -11,9 +11,9 @@
     <ul>
       <li *ngFor="let iten of listaUltimas">
         <app-card-info
-          [titulo]=iten.titulo
+          [titulo]="iten.titulo"
           [link]=iten.link
-          [categoria]=iten.categoria>
+          [categoria]="iten.categoria">
         </app-card-info>
       </li>
     </ul>

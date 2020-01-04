@@ -1,0 +1,53 @@
+@import "../../estilo/master";
+
+@fundo-elemento: @cor-quadro;
+
+div{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  float: left;
+  padding: 0 1% 0;
+  background-color: @fundo-elemento;
+  text-align: center;
+  font-family: @fonte;
+  font-size: @font-size;
+  div:first-child{
+    width: auto;
+    overflow: hidden;
+    padding: 1%;
+    height: 100%;
+    h3{
+      .FaixaSobreTexto(2,7%,@font-size*2.5,@letra-branca,@fundo-elemento,@cor-dois);
+    }
+    h4{
+      .FaixaSobreTexto(3,77%,@font-size*1.5,red,@fundo-elemento,@cor-dois);
+    }
+    div{
+      overflow: hidden;
+      border-radius: 5px;
+      height: 350px;
+      img{
+        z-index: 1;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: @cor-um 2px 2px 1px;
+        transition-duration: 1s;
+      }
+      img:hover{
+        transform: scale(1.3);
+      }
+    }
+  }
+  div{
+    height: 25%;
+    text-align: left;
+    color: @letra-branca;
+    border-top: solid 1px @letra-branca;
+    p{
+      width: 100%;
+      text-transform: capitalize;
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+/**
+Faixa de texto sobre a imagem ou bloco que precisa ser sobreposta
+ */
+#promocao {
+  width: 100%;
+  display: inline-flex;
+}
+#promocao div {
+  width: 33.33%;
+}
+/*# sourceMappingURL=index.component.css.map */
