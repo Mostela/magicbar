@@ -7,4 +7,15 @@
       [p-slides]="slideItems">
     </po-slide>
   </div>
+  <div>
+    <ul>
+      <li *ngFor="let iten of listaUltimas">
+        <app-card-info
+          [titulo]=iten.titulo
+          [link]=iten.link
+          [categoria]=iten.categoria>
+        </app-card-info>
+      </li>
+    </ul>
+  </div>
 </header>

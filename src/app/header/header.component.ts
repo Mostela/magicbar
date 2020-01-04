@@ -13,15 +13,23 @@ export class HeaderComponent implements OnInit {
   interval: number;
   slideItem: PoSlideItem;
   slideItems: Array<PoSlideItem>;
+  listaUltimas: Array<object>;
 
   constructor() { }
 
   ngOnInit() {
     this.restore();
+    this.listaUltimas = [
+      {link: 'cardapio', titulo: 'C6', categoria: '♥'},
+      {link: 'cardapio', titulo: 'C6', categoria: '♥'},
+      {link: 'cardapio', titulo: 'C6', categoria: '♥'},
+      {link: 'cardapio', titulo: 'C6', categoria: '♥'},
+      {link: 'cardapio', titulo: 'C6', categoria: '♥'}
+    ];
   }
 
   restore() {
-    this.interval = undefined;
+    this.interval = 1000;
     this.height = undefined;
     this.slideItems = [
       { image: 'https://www.causaoperaria.org.br/wp-content/uploads/2019/07/Portinari-1024x585.jpg'},

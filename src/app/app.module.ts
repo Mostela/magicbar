@@ -11,6 +11,7 @@ import { IndexComponent } from './pages/index/index.component';
 import { HeaderComponent } from './header/header.component';
 import { PoModule } from '@portinari/portinari-ui';
 import { RouterModule } from '@angular/router';
+import { CardInfoComponent } from './card-info/card-info.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     AppComponent,
     IndexComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardInfoComponent
   ],
   imports: [
     BrowserModule,

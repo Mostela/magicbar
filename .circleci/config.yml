@@ -34,12 +34,6 @@ jobs:
       - image: circleci/node:10-browsers # the primary container, where your job's commands are run
     steps:
       - checkout
-      # CRIANDO A PASTA DE TESTE
-      - run:
-          - name: Criando a pasta de test
-          - command: |
-              echo "Meus artefatos" > /tmp/artefatos-1;
-              mkdir /tmp/artefatos;
       - store_artifacts:
           - path: /tmp/artefatos-1
           - destination: artifact-file
