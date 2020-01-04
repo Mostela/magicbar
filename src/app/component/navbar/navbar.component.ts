@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MeuMenu} from './menu';
-import {AppComponent} from '../app.component';
-import { from } from 'rxjs';
-import { Globais } from '../globals';
+import { Globais } from '../../globals';
 
 @Component({
   selector: 'app-navbar',

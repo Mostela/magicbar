@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Globais } from '../../globals';
+import { promocaoLista } from './promocao_list';
 
 @Component({
   selector: 'app-index',
@@ -8,7 +8,7 @@ import { Globais } from '../../globals';
 })
 export class IndexComponent implements OnInit {
 
-  titulo = Globais.titulo;
+  produtos = promocaoLista;
   constructor() { }
 
   ngOnInit() {

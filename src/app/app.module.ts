@@ -4,14 +4,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { FooterComponent } from './component/footer/footer.component';
 import { CardapioComponent } from './pages/cardapio/cardapio.component';
 import { IndexComponent } from './pages/index/index.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './component/header/header.component';
 import { PoModule } from '@portinari/portinari-ui';
 import { RouterModule } from '@angular/router';
-import { CardInfoComponent } from './card-info/card-info.component';
+import { CardInfoComponent } from './component/card-info/card-info.component';
+import { CardImagemComponent } from './component/card-imagem/card-imagem.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CardInfoComponent } from './card-info/card-info.component';
     AppComponent,
     IndexComponent,
     HeaderComponent,
-    CardInfoComponent
+    CardInfoComponent,
+    CardImagemComponent
   ],
   imports: [
     BrowserModule,

@@ -3,27 +3,27 @@ version: 2.1
 jobs:
   construcao:
     docker:
-      image: circleci/node:10-browsers # the primary container, where your job's commands are run
+      - image: circleci/node:10-browsers # the primary container, where your job's commands are run
     steps:
-      checkout # check out the code in the project directory
-      restore_cache:
+    - checkout # check out the code in the project directory
+    - restore_cache:
           keys:
               - v1-dependencies-{{ checksum "package-lock.json" }}
               - v1-dependencies
-      - run:
+     - run:
         name: Instalando dependencias
         command: npm install
-      save_cache:
-          key: v1-dependecies-{{ checksum "package-lock.json" }}
-          paths:
+    - save_cache:
+        key: v1-dependecies-{{ checksum "package-lock.json" }}
+        paths:
               - node_modules
-      run:
-          name: Fazendo o teste
-          - command: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+    - run:
+        name: Fazendo o teste
+        command: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
       # Para acabar o teste
-        run:
-          - name: Fim do teste
-          - command: npm run e2e -- --protactor-config=e2e/protactor-ci.config.js
+    - run:
+        name: Fim do teste
+        command: npm run e2e -- --protactor-config=e2e/protactor-ci.config.js
 
       - store_artifacts:
           path: angular/_site/docs/
@@ -31,24 +31,24 @@ jobs:
 
   teste:
     docker:
-      image: circleci/node:10-browsers # the primary container, where your job's commands are run
+      - image: circleci/node:10-browsers # the primary container, where your job's commands are run
     steps:
-      checkout
-      store_artifacts:
+      - checkout
+      - store_artifacts:
           path: /tmp/artefatos
 
-      restore_cache:
-          - keys:
+      - restore_cache:
+          keys:
               - v1-dependencies-{{ checksum "package-lock.json" }}
               - v1-dependencies
-      run:
-        name: Instalando dependencias
-        command: npm install
-      save_cache:
-        key: v1-dependecies-{{ checksum "package-lock.json" }}
-        paths:
+      - run:
+          name: Instalando dependencias
+          command: npm install
+      - save_cache:
+          key: v1-dependecies-{{ checksum "package-lock.json" }}
+          paths:
           - node_modules
-      run:
+      - run:
           name: Fazendo a Build
           command: npm run build
 

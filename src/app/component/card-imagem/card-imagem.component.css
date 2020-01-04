@@ -1,0 +1,73 @@
+/**
+Faixa de texto sobre a imagem ou bloco que precisa ser sobreposta
+ */
+div {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  float: left;
+  padding: 0 1% 0;
+  background-color: #87a80f;
+  text-align: center;
+  font-family: 'Lato', 'Arial', Fantasy;
+  font-size: 14px;
+}
+div div:first-child {
+  width: auto;
+  overflow: hidden;
+  padding: 1%;
+  height: 100%;
+}
+div div:first-child h3 {
+  z-index: 2;
+  top: 7%;
+  font-size: 35px;
+  position: absolute;
+  text-align: left;
+  font-weight: bold;
+  text-shadow: #dbc023 2px 2px 2px;
+  background-color: #87a80f;
+  padding: 2% 2% 2% 1%;
+  text-decoration: none;
+  color: #FFF;
+}
+div div:first-child h4 {
+  z-index: 3;
+  top: 77%;
+  font-size: 21px;
+  position: absolute;
+  text-align: left;
+  font-weight: bold;
+  text-shadow: #dbc023 2px 2px 2px;
+  background-color: #87a80f;
+  padding: 2% 2% 2% 1%;
+  text-decoration: none;
+  color: red;
+}
+div div:first-child div {
+  overflow: hidden;
+  border-radius: 5px;
+  height: 350px;
+}
+div div:first-child div img {
+  z-index: 1;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: #3f1e1e 2px 2px 1px;
+  transition-duration: 1s;
+}
+div div:first-child div img:hover {
+  transform: scale(1.3);
+}
+div div {
+  height: 25%;
+  text-align: left;
+  color: #FFF;
+  border-top: solid 1px #FFF;
+}
+div div p {
+  width: 100%;
+  text-transform: capitalize;
+  font-style: italic;
+}
+/*# sourceMappingURL=card-imagem.component.css.map */

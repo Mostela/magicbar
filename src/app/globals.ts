@@ -1,3 +1,3 @@
 export const Globais = {
-    "titulo": "MagicBar"
-}
+    titulo: 'MagicBar'
+};
