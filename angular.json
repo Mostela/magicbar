@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@portinari/style/css/po-theme-default.min.css",
               "src/styles.less"
             ],
             "stylePreprocessorOptions": {
@@ -98,6 +99,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@portinari/style/css/po-theme-default.min.css",
               "src/styles.less"
             ],
             "scripts": []
@@ -129,6 +131,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "magicbar"
 }

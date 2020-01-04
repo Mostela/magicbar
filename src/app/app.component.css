@@ -1,0 +1,48 @@
+.bootle {
+  bottom: 0;
+  opacity: 0;
+  width: 40px;
+  text-align: center;
+  position: absolute;
+  display: inline-block;
+  vertical-align: bottom;
+  transform-origin: bottom right;
+  transform: translateX(-300px);
+  animation: move 2500ms linear infinite;
+}
+.bootle .bottle:before,
+.bootle .bottle:after {
+  left: 50%;
+  opacity: 0;
+  content: '';
+  position: absolute;
+  background-color: #FBCE13;
+}
+.bootle .bottle:before {
+  opacity: 1;
+  width: 4px;
+  top: -40px;
+  height: 14px;
+  margin-left: -2px;
+  animation: lock-cap 2500ms linear infinite;
+}
+.bootle .bottle:after {
+  top: 0;
+  height: 4px;
+  width: 16px;
+  margin-left: -8px;
+  border-radius: 4px;
+  animation: show-cap 2500ms linear infinite;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #FFF;
+  color: #000;
+  font-family: 'Lato', 'Arial', Fantasy;
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+/*# sourceMappingURL=app.component.css.map */
