@@ -1,0 +1,32 @@
+@import "../estilo/master";
+
+:root{
+  --color-slide-background-color-active-circle: red;
+  --color-slide-background-color-arrow-circle: white;
+  --color-slide-background-color-circle: blue;
+  --color-slide-background-color-scrollbar: var(--color-primary-alpha-50);
+  --color-slide-border-arrow: green;
+  --color-slide-box-shadow-arrow-circle: red;
+  --color-slide-box-shadow-wrapper: black;
+}
+
+header{
+  display: inline-flex;
+  background-color: @fundo-dois;
+  font-family: @fonte;
+  font-size: @font-size;
+  div:first-child{
+    width: 75%;
+  }
+  div{
+    ul{
+      list-style: none;
+    }
+    width: 25%;
+    padding: 1%;
+    app-card-info:first-child, :last-child{
+      margin: 0;
+    }
+  }
+  padding: 1%;
+}
