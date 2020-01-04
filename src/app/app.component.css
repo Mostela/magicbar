@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 .bootle {
   bottom: 0;
   opacity: 0;
@@ -36,7 +34,6 @@
   border-radius: 4px;
   animation: show-cap 2500ms linear infinite;
 }
->>>>>>> 95308068e2a28d820217f26b86feb702a479912d
 body {
   padding: 0;
   margin: 0;

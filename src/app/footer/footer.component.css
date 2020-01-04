@@ -63,21 +63,28 @@ footer div:first-child ul li {
   width: 40%;
   font-family: cursive;
   text-align: center;
-  background-color: #FF0000;
+  background-color: #dbc023;
   border-left: 5px solid gray;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 5px 10px 15px 5px;
   animation-duration: 1s;
+  transform: rotate(-5deg);
 }
 footer div:first-child ul li a {
   padding: 2%;
   width: 100%;
   color: #FFF;
 }
+footer div:first-child ul li:nth-child(1) {
+  transform: rotate(-8deg);
+}
+footer div:first-child ul li:nth-child(2) {
+  transform: rotate(3deg);
+}
+footer div:first-child ul li:nth-child(3) {
+  transform: rotate(7deg);
+}
 footer div:first-child ul li:hover {
-  transform: rotate(-5deg);
+  transform: rotate(0deg);
 }
 footer a {
   text-decoration: none;
