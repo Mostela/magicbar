@@ -11,7 +11,7 @@ export class CardInfoComponent implements OnInit {
   @Input() titulo: string;
   @Input() link: string;
   @Input() categoria: string;
-  private icone: string;
+  icone: string;
   constructor(private router: Router) { }
 
   ngOnInit() {

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "portifolio-mostela": {
+      "hosting": {
+        "magicbar": [
+          "portifolio-mostela"
+        ]
+      }
+    }
+  }
+}
