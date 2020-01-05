@@ -34,21 +34,22 @@ jobs:
       - run:
           name: End to End Test
           command: npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
+  """
   build_prod:
     docker:
       - image: circleci/node:10-browsers
-      steps:
-        # Checkout the code from the branch into the working_directory
-        - checkout
-        # Log the current branch
-        - run:
-            name: Show current branch
-            command: echo ${CIRCLE_BRANCH}
-        - test_normal
+    steps:
+      # Checkout the code from the branch into the working_directory
+      - checkout
+      # Log the current branch
+      - run:
+          name: Show current branch
+          command: echo ${CIRCLE_BRANCH}
+  """
 
 workflows:
   version: 2
   build_and_test:
     jobs:
       - test_normal
-      - build_prod
+
