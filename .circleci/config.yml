@@ -22,7 +22,7 @@ jobs:
           name: Install local dependencies
           command: npm install
       - store_artifacts:
-          path: src/
+          path: .circleci/
           destination: circleci-docs
       - store_test_results:
           path: test-results
@@ -61,8 +61,38 @@ jobs:
       - run:
           name: Build para producao
           command: npm run ng build --prod
+      - store_artifacts:
+          path: .circleci/
+          destination: circleci-docs
+  deploy:
+    docker:
+      - image: circleci/node:12-browsers
+    steps:
+      # Checkout the code from the branch into the working_directory
+      - checkout
+      # Log the current branch
+      - run:
+          name: Branch atual
+          command: echo ${CIRCLE_BRANCH}
+          # Restore local dependencies from cache
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
+      # Install project dependencies
+      - run:
+          name: Install local dependencies
+          command: npm install
+      - save_cache:
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Deploy Firebase
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only hosting
 
-#./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only hosting
+
+#
 
 workflows:
   version: 2
