@@ -13,17 +13,11 @@ import { PoModule } from '@portinari/portinari-ui';
 import { RouterModule } from '@angular/router';
 import { CardInfoComponent } from './component/card-info/card-info.component';
 import { CardImagemComponent } from './component/card-imagem/card-imagem.component';
+import { ComponentModule } from './component/component.module';
 
 @NgModule({
   declarations: [
-    CardapioComponent,
-    NavbarComponent,
-    FooterComponent,
-    AppComponent,
-    IndexComponent,
-    HeaderComponent,
-    CardInfoComponent,
-    CardImagemComponent
+    ComponentModule
   ],
   imports: [
     BrowserModule,
