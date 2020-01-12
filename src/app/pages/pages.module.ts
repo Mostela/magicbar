@@ -1,25 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardapioComponent } from './cardapio/cardapio.component';
-import { ComponentModule } from '../component/component.module';
-import { IndexComponent } from './index/index.component';
-
-
+import {IndexComponent} from './index/index.component';
+import {CardapioComponent} from './cardapio/cardapio.component';
+import {ComponentModule} from '../component/component.module';
 
 @NgModule({
   declarations: [
-    CardapioComponent,
-    ComponentModule,
-    IndexComponent
+    IndexComponent,
+    CardapioComponent
   ],
   imports: [
-    CommonModule,
     ComponentModule,
-    CardapioComponent,
-    IndexComponent
-  ],
-  exports: [
-    PagesModule
+    CommonModule
   ]
 })
 export class PagesModule { }

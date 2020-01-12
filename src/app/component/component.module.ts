@@ -1,30 +1,43 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardImagemComponent } from './card-imagem/card-imagem.component';
-import { CardInfoComponent } from './card-info/card-info.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {RouterModule} from '@angular/router';
+import {CardInfoComponent} from './card-info/card-info.component';
+import {CardImagemComponent} from './card-imagem/card-imagem.component';
+import {FooterComponent} from './footer/footer.component';
+import {HeaderComponent} from './header/header.component';
+import {NavbarComponent} from './navbar/navbar.component';
+import {PoSlideModule} from '@portinari/portinari-ui';
 
 
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
   declarations: [
-    CardImagemComponent,
     CardInfoComponent,
-    FooterComponent,
+    CardImagemComponent,
     HeaderComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
+  ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule,
+    PoSlideModule
   ],
   exports: [
-    CardImagemComponent,
     CardInfoComponent,
-    FooterComponent,
+    CardImagemComponent,
     HeaderComponent,
-    NavbarComponent
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule,
+    NavbarComponent,
+    FooterComponent
   ]
 })
 export class ComponentModule { }
