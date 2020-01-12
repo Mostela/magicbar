@@ -5,8 +5,8 @@ import { IndexComponent } from './pages/index/index.component';
 
 
 const routes: Routes = [
-  {path: "", component: IndexComponent},
-  {path: "cardapio", component: CardapioComponent}
+  {path: '', component: IndexComponent},
+  {path: 'cardapio', component: CardapioComponent}
 ];
 
 @NgModule({
