@@ -1,0 +1,98 @@
+<div id="agendaHorario">
+    <div>
+        <h3>Alugue a sua mesa com antecedencia e garanta seu lugar</h3>
+        <small>Não é possivel adicionar acompanhentes no dia</small>
+    </div>
+    <div>
+        <div>
+            <po-calendar
+                [(ngModel)]="dateSelec"
+                [p-locale]="locale"
+                [p-min-date]="minDate"
+                [p-max-date]="maxDate"
+                (p-change)="EventEmitter()">
+            </po-calendar>
+        </div>
+        <div>
+            <div class="block-input">
+                <div class="input-group">
+                    <h3>Selecione a data:</h3>
+                    <po-datepicker
+                        [(ngModel)]="dateSelec"
+                        [p-min-date]="minDate"
+                        [p-max-date]="maxDate"
+                        [ngModelOptions]="{standalone: true}"
+                        (p-change)="EventEmitter()"
+                        [name]="'dataSelecionada'"
+                    ></po-datepicker>
+                </div>
+                <div class="input-group">
+                    <app-alert
+                        [mensagem]="'Não disponivel aos finais de semana'"
+                        [visibilidade]="vbFimSemana"
+                    ></app-alert>
+                </div>
+                <div class="input-group">
+                    <po-input
+                        [name]="'horaLocacao'"
+                        [p-label]="'Horario inicial de locação'"
+                        [p-maxlength]="4"
+                        [p-required]="true"
+                        [p-mask]="'00:00'"
+                        [p-placeholder]="'18:00'"
+                    ></po-input>
+                </div>
+                <div class="input-group">
+                    <po-input
+                        [name]="'nomeCliente'"
+                        [p-label]="'Nome'"
+                        [p-maxlength]="40"
+                        [p-required]="true"
+                        [p-placeholder]="'João Carlos Camargo'"
+                    ></po-input>
+                </div>
+            </div>
+            <div class="block-input">
+                <div class="input-group">
+                    <po-email
+                        [name]="'email'"
+                        [p-label]="'Email para confirmação da reserva'"
+                        [p-maxlength]="90"
+                        [p-placeholder]="'joaocarlos@gmail.com'"
+                        [p-required]="true"
+                    ></po-email>
+                </div>
+                <div class="input-group">
+                    <po-input
+                        [name]="'celularCliente'"
+                        [p-label]="'Celular para contato'"
+                        [p-mask]="'(99) 99999-9999'"
+                        [p-placeholder]="'11 99999-9999'"
+                        [p-required]="true"
+                    ></po-input>
+                </div>
+                <div class="input-group">
+                    <po-switch
+                        [name]="'reservaEncontro'"
+                        [p-label]="'Reservar para encontro'"
+                        [p-label-on]="'Reservado duas cadeiras'"
+                        [p-label-off]="'Reservado mesa familia'"
+                        (p-change)="ReservaMesa()"
+                    ></po-switch>
+                </div>
+                <div class="input-group">
+                    <po-number *ngIf="vbReservaMesa == true"
+                        p-label="'Quantidade de pessoas'"
+                        p-min="1"
+                        p-max="50"
+                    ></po-number>
+                </div>
+            </div>
+            <po-button
+                p-label="Reservar"
+                p-type="submit"
+                (p-click)="SalvaReserva()"
+            ></po-button>
+        </div>
+    </div>
+</div>

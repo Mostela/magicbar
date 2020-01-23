@@ -1,12 +1,16 @@
-<app-header></app-header>
-<div id="promocao">
-  <div *ngFor="let prod of produtos">
-    <app-card-imagem
-      [descricao]="prod.descricao"
-      [foto]="prod.foto"
-      [preco]=prod.preco
-      [titulo]="prod.titulo"
-    >
-    </app-card-imagem>
+<main>
+  <app-header></app-header>
+  <div id="promocao">
+    <div *ngFor="let prod of produtos">
+      <app-card-imagem
+        [descricao]="prod.descricao"
+        [foto]="prod.foto"
+        [preco]=prod.preco
+        [titulo]="prod.titulo"
+      ></app-card-imagem>
+    </div>
   </div>
-</div>
+  <section>
+    <app-horarios></app-horarios>
+  </section>
+</main>

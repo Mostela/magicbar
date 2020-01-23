@@ -9,6 +9,8 @@ import {FooterComponent} from './footer/footer.component';
 import {HeaderComponent} from './header/header.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {PoSlideModule} from '@portinari/portinari-ui';
+import { HorariosModule } from './horarios/horarios.module';
+import { AlertComponent } from './alert/alert.component';
 
 
 
@@ -18,7 +20,7 @@ import {PoSlideModule} from '@portinari/portinari-ui';
     CardImagemComponent,
     HeaderComponent,
     NavbarComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import {PoSlideModule} from '@portinari/portinari-ui';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-    PoSlideModule
+    PoSlideModule,
+    HorariosModule
   ],
   exports: [
     CardInfoComponent,
@@ -37,7 +40,9 @@ import {PoSlideModule} from '@portinari/portinari-ui';
     HttpClientModule,
     RouterModule,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    HorariosModule,
+    AlertComponent
   ]
 })
 export class ComponentModule { }
