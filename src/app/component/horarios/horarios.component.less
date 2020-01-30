@@ -1,8 +1,7 @@
 @import '../../estilo/master';
 #agendaHorario{
     padding: 2%;
-    display: inline-block;
-    div:first{
+    div:first-child{
         h3{
             font-size: @font-size * 2;
             color: @letra;
@@ -10,6 +9,11 @@
             padding-left: 8%;
         }
         padding: 1% 0.5%;
-        
+    }
+    div{
+        display: inline-flex;
+    }
+    div:last-child{
+        display: table;
     }
 }
